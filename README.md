@@ -88,11 +88,13 @@ To deploy your own:
 
 ## 📸 Screenshots
 
-<img width="1919" height="977" alt="image" src="https://github.com/user-attachments/assets/c06aecfe-935f-4b1c-84b2-b1dd5687d982" />
-<img width="1919" height="992" alt="image" src="https://github.com/user-attachments/assets/efc1d92f-fe07-43fe-a807-b31cd6e1448f" />
-<img width="1919" height="992" alt="image" src="https://github.com/user-attachments/assets/651c1793-dbce-4bb7-aa5e-8d845a372f60" />
-<img width="1919" height="993" alt="image" src="https://github.com/user-attachments/assets/6f29df7a-042b-408b-8422-5a3109cc00c6" />
-<img width="1919" height="995" alt="image" src="https://github.com/user-attachments/assets/a425176a-84ad-4448-a4ef-80f595673c4b" />
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/c06aecfe-935f-4b1c-84b2-b1dd5687d982" width="800" />
+  <img src="https://github.com/user-attachments/assets/efc1d92f-fe07-43fe-a807-b31cd6e1448f" width="800" />
+  <img src="https://github.com/user-attachments/assets/651c1793-dbce-4bb7-aa5e-8d845a372f60" width="800" />
+  <img src="https://github.com/user-attachments/assets/6f29df7a-042b-408b-8422-5a3109cc00c6" width="800" />
+  <img src="https://github.com/user-attachments/assets/a425176a-84ad-4448-a4ef-80f595673c4b" width="800" />
+</p>
 
 ---
 
