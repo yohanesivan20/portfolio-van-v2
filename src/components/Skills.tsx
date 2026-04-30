@@ -14,7 +14,7 @@ const skillGroups = [
   },
   {
     title: "Tools & Others",
-    skills: ["AWS S3", "Git", "Sequelize", "Docker"],
+    skills: ["AWS S3", "Git", "Sequelize"],
   },
 ];
 
