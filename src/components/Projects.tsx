@@ -7,11 +7,10 @@ const projects = [
   {
     title: "B2B Way Finder",
     desc: "A complete B2B platform combining a public website and admin dashboard for seamless registration and real-time attendance tracking.",
+    techStack: ["HTML", "CSS", "JavaScript"],
     details: {
       objective:
         "To build a unified platform that simplifies event registration and attendance tracking for both users and administrators.",
-      challenge:
-        "Ensuring real-time data synchronization between public-facing pages and the admin dashboard while maintaining high performance.",
       conclusion:
         "Successfully delivered a scalable and intuitive system that streamlines registration and provides full visibility for event organizers.",
     },
@@ -23,11 +22,10 @@ const projects = [
   {
     title: "AI Document Processor",
     desc: "An intelligent invoice processing system using OCR and LLM to automatically extract structured data from documents.",
+    techStack: ["Laravel", "Tesseract OCR", "Ollama LLM"],
     details: {
       objective:
         "To automate invoice data extraction and reduce manual processing time for finance and operations teams.",
-      challenge:
-        "Handling diverse document formats while maintaining high accuracy and minimizing extraction errors.",
       conclusion:
         "Significantly improved processing efficiency and reduced manual workload through reliable AI-powered automation.",
     },
@@ -38,16 +36,30 @@ const projects = [
   {
     title: "Faith Game B2B Registration",
     desc: "A modern B2B event registration platform designed to simplify participant onboarding and management.",
+    techStack: ["Next.js", "Google App Script"],
     details: {
       objective:
         "To provide a fast, user-friendly registration experience tailored for large-scale event participation.",
-      challenge:
-        "Balancing speed, simplicity, and data accuracy without compromising the user experience.",
       conclusion:
         "Delivered a clean and efficient registration system that helps organizers manage participants effortlessly.",
     },
     links: [
       { label: "View Website", href: "https://faith-game-b2b-regist.vercel.app/" },
+    ],
+  },
+  {
+    title: "Beelio Furniture Web App",
+    desc: "A sleek and modern e-commerce web app for a furniture brand, delivering a smooth browsing and shopping experience.",
+    techStack: ["Next.js"],
+    details: {
+      objective:
+        "To create an elegant and performant web presence for a furniture brand that highlights products and drives customer engagement.",
+      conclusion:
+        "Delivered a polished storefront that reflects the brand's aesthetic and provides an intuitive shopping journey for customers.",
+    },
+    links: [
+      { label: "View Website", href: "https://blfurni-web-app.vercel.app/" },
+      { label: "View on GitHub", href: "https://github.com/yohanesivan20/blfurni-web-app"}
     ],
   },
 ];
@@ -75,23 +87,23 @@ export default function Projects() {
           Selected Projects
         </h2>
 
-        {/* GRID */}
-        <div className="grid md:grid-cols-3 gap-6">
+        {/* GRID — 4 columns on large screens */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {projects.map((p, i) => (
             <motion.div
               key={i}
               whileHover={{ scale: 1.05 }}
-              className="group p-6 bg-[#0d0d0d] border border-[#222] rounded-2xl transition hover:border-green-400/40"
+              className="group p-6 bg-[#0d0d0d] border border-[#222] rounded-2xl transition hover:border-green-400/40 flex flex-col"
             >
               <h3 className="text-lg font-semibold mb-2">{p.title}</h3>
 
-              <p className="text-neutral-400 text-sm mb-4 leading-6">
+              <p className="text-neutral-400 text-sm mb-4 leading-6 flex-1">
                 {p.desc}
               </p>
 
               <button
                 onClick={() => setActiveProject(i)}
-                className="inline-flex items-center rounded-full border border-green-400 px-4 py-2 text-sm text-green-400 transition hover:bg-green-400/10"
+                className="inline-flex items-center justify-center rounded-full border border-green-400 px-4 py-2 text-sm text-green-400 transition hover:bg-green-400/10"
               >
                 View Details
               </button>
@@ -121,22 +133,37 @@ export default function Projects() {
 
                 {/* HEADER */}
                 <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-                    <div>
-                        <p className="text-green-400 text-sm tracking-[4px] uppercase">
-                        Project Overview
-                        </p>
-                        <h3 className="text-3xl font-bold mt-2">
-                        {projects[activeProject].title}
-                        </h3>
-                    </div>
+                  <div>
+                    <p className="text-green-400 text-sm tracking-[4px] uppercase">
+                      Project Overview
+                    </p>
+                    <h3 className="text-3xl font-bold mt-2">
+                      {projects[activeProject].title}
+                    </h3>
+                  </div>
 
                   {/* Desktop Close */}
-                    <button
+                  <button
                     onClick={() => setActiveProject(null)}
                     className="hidden md:inline-flex rounded-full border border-white/20 bg-white/5 px-4 py-2 text-sm text-white hover:bg-white/10"
-                    >
+                  >
                     Close
-                    </button>
+                  </button>
+                </div>
+
+                {/* TECH STACK */}
+                <div>
+                  <h4 className="text-xl font-semibold mb-3">Tech Stack</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {projects[activeProject].techStack.map((tech) => (
+                      <span
+                        key={tech}
+                        className="text-sm px-4 py-1.5 rounded-full bg-green-400/10 text-green-400 border border-green-400/30"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
                 </div>
 
                 {/* CONTENT */}
@@ -148,14 +175,6 @@ export default function Projects() {
                       {projects[activeProject].details.objective}
                     </p>
                   </div>
-
-                  <div>
-                    <h4 className="text-xl font-semibold mb-3">Challenge</h4>
-                    <p className="text-neutral-300 leading-7">
-                      {projects[activeProject].details.challenge}
-                    </p>
-                  </div>
-
                   <div>
                     <h4 className="text-xl font-semibold mb-3">Conclusion</h4>
                     <p className="text-neutral-300 leading-7">
@@ -163,21 +182,6 @@ export default function Projects() {
                     </p>
                   </div>
 
-                  {/* SCREENSHOT */}
-                  {/* <div className="rounded-3xl border border-white/10 bg-[#111] p-6">
-                    <h4 className="text-xl font-semibold mb-3">Screenshots</h4>
-
-                    <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                      {Array.from({ length: 6 }).map((_, index) => (
-                        <div
-                          key={index}
-                          className="h-32 rounded-2xl border border-dashed border-white/10 bg-[#0c0c0c] flex items-center justify-center text-neutral-500 text-sm"
-                        >
-                          Img {index + 1}
-                        </div>
-                      ))}
-                    </div>
-                  </div> */}
                 </div>
 
                 {/* ACTION */}
@@ -195,12 +199,12 @@ export default function Projects() {
                   ))}
 
                   {/* Mobile Close */}
-                    <button
+                  <button
                     onClick={() => setActiveProject(null)}
                     className="md:hidden w-full rounded-full bg-white text-black py-4 text-sm font-semibold mt-4"
-                    >
+                  >
                     Close
-                    </button>
+                  </button>
                 </div>
 
               </div>
