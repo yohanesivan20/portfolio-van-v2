@@ -19,6 +19,7 @@ const links = [
   { label: "About", target: "about" },
   { label: "Skills", target: "skills" },
   { label: "Projects", target: "projects" },
+  { label: "Creative", target: "creative" },
   { label: "Experience", target: "experience" },
   { label: "Contact", target: "contact" },
 ];
