@@ -61,6 +61,10 @@ const projectGroups = [
             label: "View Website",
             href: "https://faith-game-b2b-regist.vercel.app/",
           },
+          {
+            label: "View Dashboard",
+            href: "https://faith-game-b2b-regist.vercel.app/admin",
+          }
         ],
       },
       {
