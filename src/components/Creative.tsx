@@ -17,6 +17,7 @@ const magazines = [
     title: "Majalah Warta Ubaya",
     year: "2020",
     category: "Editorial Design",
+    cover: null,
     pdf: "/files/MAJALAH_WARTA_UBAYA_JULI_2020.pdf",
     accent: "#4ade80",
     issue: "Vol. 01",
@@ -26,6 +27,7 @@ const magazines = [
     title: "Booklet Portofolio Design",
     year: "2021",
     category: "Art Direction",
+    cover: null,
     pdf: "/files/Portofolio_Ivan.pdf",
     accent: "#4ade80",
     issue: "Vol. 02",
@@ -140,6 +142,7 @@ function MagazineCard({
           <div className="relative aspect-[3/4] overflow-hidden bg-[#0c0c0c] border border-white/8">
             {!imgLoaded && <ShimmerCard />}
             <motion.img
+              src={mag.cover}
               alt={mag.title}
               onLoad={() => setImgLoaded(true)}
               className={`w-full h-full object-cover transition-opacity duration-500 ${imgLoaded ? "opacity-80" : "opacity-0"} group-hover:opacity-100`}
