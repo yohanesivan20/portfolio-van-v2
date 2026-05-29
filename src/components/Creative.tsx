@@ -142,7 +142,7 @@ function MagazineCard({
           <div className="relative aspect-[3/4] overflow-hidden bg-[#0c0c0c] border border-white/8">
             {!imgLoaded && <ShimmerCard />}
             <motion.img
-              src={mag.cover}
+              src={mag.cover ?? "https://placehold.co/800x1200/0a0a0a/4ade80?text=PDF"}
               alt={mag.title}
               onLoad={() => setImgLoaded(true)}
               className={`w-full h-full object-cover transition-opacity duration-500 ${imgLoaded ? "opacity-80" : "opacity-0"} group-hover:opacity-100`}
