@@ -17,8 +17,8 @@ const magazines = [
     title: "Majalah Warta Ubaya",
     year: "2020",
     category: "Editorial Design",
-    cover: null,
-    pdf: "/files/MAJALAH_WARTA_UBAYA_JULI_2020.pdf",
+    cover: "https://placehold.co/800x1200/0a0a0a/4ade80?text=PDF",
+    pdf: "/files/magazine_wu.pdf",
     accent: "#4ade80",
     issue: "Vol. 01",
   },
@@ -27,8 +27,8 @@ const magazines = [
     title: "Booklet Portofolio Design",
     year: "2021",
     category: "Art Direction",
-    cover: null,
-    pdf: "/files/Portofolio_Ivan.pdf",
+    cover: "https://placehold.co/800x1200/0a0a0a/4ade80?text=PDF",
+    pdf: "/files/portfolio_ivan.pdf",
     accent: "#4ade80",
     issue: "Vol. 02",
   },
@@ -36,8 +36,18 @@ const magazines = [
 
 // ─── Easing + spring configs ──────────────────────────────────────────────────
 
-const springConfig = { type: "spring", stiffness: 300, damping: 30 };
-const softSpring   = { type: "spring", stiffness: 160, damping: 24 };
+const springConfig = {
+  type: "spring" as const,
+  stiffness: 300,
+  damping: 30,
+};
+
+const softSpring = {
+  type: "spring" as const,
+  stiffness: 160,
+  damping: 24,
+};
+
 const premiumEase  = [0.25, 0.46, 0.45, 0.94] as const;
 
 // ─── Grain SVG (shared) ───────────────────────────────────────────────────────
