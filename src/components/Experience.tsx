@@ -4,8 +4,22 @@ import Section from "./Section";
 
 const experiences = [
   {
-    year: "Jan 2022 - Present",
+    year: "Jan 2026 - Present",
     title: "Junior Manager Software Developer — Indomarco Prismatama",
+    desc: "Leading software development initiatives while bridging technical execution with project management, from requirements gathering and solution planning to delivery and production.",
+    bullets: [
+      "Gathered and analyzed business requirements with manager, translating business needs into technical solutions.",
+      "Planned project scope, timelines, priorities, and deliverables while monitoring progress to ensure projects were delivered on schedule.",
+      "Designed system architecture, database structures, RESTful APIs, and technical solutions based on business requirements.",
+      "Coordinated with cross-functional teams and stakeholders to align requirements, resolve technical challenges, and maintain project progress.",
+      "Led development activities from implementation and integration to UAT, deployment, and post-production support.",
+      "Improved business processes by identifying technical opportunities and proposing scalable software solutions.",
+      "Prepared technical documentation, project updates, and system documentation to support communication and knowledge sharing.",
+    ],
+  },
+  {
+    year: "Jan 2022 - Dec 2025",
+    title: "Software Developer Supervisor — Indomarco Prismatama",
     desc: "Developed and maintained web applications using PHP and JavaScript.",
     bullets: [
       "Built a web-based platform to support Indogrosir's Surveyor Team operations.",
