@@ -30,19 +30,23 @@ const projectGroups = [
         ],
       },
       {
-        title: "AI Document Processor",
-        desc: "An intelligent invoice processing system using OCR and LLM to automatically extract structured data from documents.",
-        techStack: ["Laravel", "Tesseract OCR", "Ollama LLM"],
+        title: "Airbnb Data Analysis",
+        desc: "An exploratory data analysis project using Airbnb listing data to understand pricing, room types, and neighbourhood patterns.",
+        techStack: ["Python", "Pandas", "Matplotlib", "Jupyter Notebook", "React"],
         details: {
           objective:
-            "To automate invoice data extraction and reduce manual processing time for finance and operations teams.",
+            "To explore Airbnb listing data, clean the dataset, and identify patterns in prices, room types, and neighbourhoods.",
           conclusion:
-            "Significantly improved processing efficiency and reduced manual workload through reliable AI-powered automation.",
+            "The analysis revealed differences in pricing and listing distribution across room types and neighbourhoods, which were presented through a simple interactive dashboard.",
         },
         links: [
           {
+            label: "View Dashboard",
+            href: "https://airbnb-data-visualization-dashboard.vercel.app",
+          },
+          {
             label: "View on GitHub",
-            href: "https://github.com/yohanesivan20/ai-doc-processor",
+            href: "https://github.com/yohanesivan20/airbnb-data-visualization.git",
           },
         ],
       },
