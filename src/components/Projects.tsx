@@ -32,7 +32,7 @@ const projectGroups = [
       {
         title: "Airbnb Data Analysis",
         desc: "An exploratory data analysis project using Airbnb listing data to understand pricing, room types, and neighbourhood patterns.",
-        techStack: ["Python", "Pandas", "Matplotlib", "Jupyter Notebook", "React"],
+        techStack: ["Python", "Pandas", "React"],
         details: {
           objective:
             "To explore Airbnb listing data, clean the dataset, and identify patterns in prices, room types, and neighbourhoods.",
